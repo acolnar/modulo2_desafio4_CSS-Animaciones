@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+/* NAVBAR */
+.img-logo{
+    width: 100px;
+    padding: 20px;
+}
+
+.logo-homo-desertum{
+    font-size: 20;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar{
+    background: sienna;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.navbar-logo{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-li{
+    display: flex;
+}
+
+.navbar-ul{
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.navbar-burger{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.lista{
+    list-style: none;
+    color: white;
+    padding: 0 20px;
+}
+
+/* SECTION */
+
+.section{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: tan;
+}
+
+.select{
+    width: 90%;
+}
+
+/* MAIN */
+.main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid rgb(216, 216, 216);
+}
+
+.card-titulo{
+    padding: 20px 0;
+}
+
+.card-parrafo{
+    padding: 20px 0;
+}
+
+.card-img{
+    width: 100%;
+}
+
+button{
+    width: 100%;
+    padding: 15px;
+    background:sienna;
+    color: antiquewhite;
+    font-weight: bolder;
+    font-size: 15px;
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer{
+    background: sienna;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+}
+
+.footer-link{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-icono{
+    padding: 10px;
+}
+
+@media (min-width: 576px) {
+    /* NAVBAR */
+    .navbar{
+        grid-area: navbar;
+    }
+
+    .navbar-burger{
+        display: none;
+    }
+
+    .navbar-ul{
+        display: flex;
+    }
+
+    /* SECTION */
+    .section{
+        grid-area: section;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+    /* MAIN */
+    .main{
+        grid-area: main;
+        display: flex;
+    }
+
+    .card{
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+    }
+
+    .card:hover{
+        transform: scale(1.1);
+        box-shadow: 5px 5px 15px rgb(216, 216, 216);
+    }
+
+    .card-titulo{
+        font-size: medium;
+        padding: 10px;
+    }
+
+    button{
+        transition: all 0.3s ease;
+    }
+
+    button:hover{
+        background:crimson;
+        color: white;
+    }
+
+    /* FOOTER */
+    footer{
+        grid-area: footer;
+    }
+
+    body{
+        display: grid;
+        grid-template-areas:
+        "navbar navbar"
+        "section main"
+        "footer footer";
+        grid-template-rows: 8rem 1fr 8rem;
+        grid-template-columns: 1fr 4fr;
+    }
+}
